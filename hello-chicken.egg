@@ -4,4 +4,5 @@
  (category misc)
  (license "GPL3")
  (version "1.0.0")
- (components (extension hello-chicken)))
+ (dependencies this)
+ (components (program hello-chicken)))
