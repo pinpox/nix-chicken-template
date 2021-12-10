@@ -1,7 +1,0 @@
-((synopsis "Encoding and decoding of base64 strings")
- (category parsing)
- (license "BSD")
- (test-dependencies test)
- (author "James Bailey, Jim Ursetto")
- (components (extension base64)))
-
