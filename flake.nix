@@ -1,5 +1,5 @@
 {
-  description = "Parse blog rss to markdown";
+  description = "Example flake for CHICKEN eggs";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -19,9 +19,9 @@
       in rec {
         packages = flake-utils.lib.flattenTree rec {
 
-          blog-parser = with pkgs;
+          hello-chicken = with pkgs;
             eggDerivation rec {
-              pname = "blog-parser";
+              pname = "hello-chicken";
               version = "1.0.0";
               name = "${pname}-${version}";
 
@@ -62,21 +62,6 @@
               buildInputs = with eggs;
                 [
                   # aes
-                  # crypto-tools
-                  # matchable
-                  # message-digest
-                  # miscmacros
-                  # parley
-                  # pathname-expand
-                  # posix-extras
-                  # regex
-                  # sha2
-                  # sql-de-lite
-                  # srfi-37
-                  # ssql
-                  # stty
-                  # tiger-hash
-                  # z3
                 ];
 
               meta = with lib; {
@@ -89,19 +74,14 @@
             };
 
           # apps = {
-          #   blog-parser= flake-utils.lib.mkApp {
-          #     drv = packages.blog-parser;
+          #   hello-chicken= flake-utils.lib.mkApp {
+          #     drv = packages.hello-chicken;
           #     exePath = "/bin/home-assistant-grafana-relay";
           #   };
           # };
         };
 
-        defaultPackage = packages.blog-parser;
-        # defaultApp = apps.blog-parser;
+        defaultPackage = packages.hello-chicken;
+        # defaultApp = apps.hello-chicken;
       });
 }
-
-# { pkgs, lib, eggDerivation, fetchegg }:
-# let
-#   eggs = import ./eggs.nix { inherit eggDerivation fetchegg; };
-# in

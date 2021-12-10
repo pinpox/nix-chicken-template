@@ -1,0 +1,7 @@
+;; -*- scheme -*-
+((synopsis "Hello world program for CHICKEN")
+ (author "pinpox")
+ (category misc)
+ (license "GPL3")
+ (version "1.0.0")
+ (components (extension hello-chicken)))
